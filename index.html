@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>OnOff With Special Transitions button</title>
+</head>
+<body>
+    <button class="btn" type="button" aria-label="Power" ontouchstart="">
+        <svg class="btn__icon" viewBox="0 0 16 16" width="16px" height="16px" aria-hidden="true">
+            <defs>
+                <clipPath id="btn-corners">
+                    <rect rx="2" ry="2" width="16" height="16" />
+                </clipPath>
+            </defs>
+            <g clip-path="url(#btn-corners)">
+                <rect class="btn__icon-bg-off" fill="hsl(3,60%,50%)" width="16" height="16" />
+                <rect class="btn__icon-bg-on" fill="hsl(123,50%,60%)" width="16" height="16" transform="translate(0,-32)" />
+                <circle class="btn__icon-radar" fill="none" stroke="hsl(123,50%,60%)" stroke-dasharray="58.3 50.3" stroke-dashoffset="58.3" stroke-width="16" r="8" cx="8" cy="8" transform="rotate(90,8,8)" />
+                <g fill="none" stroke="hsl(0,0%,100%)" stroke-linecap="round" stroke-width="1.5">
+                    <circle class="btn__icon-ring" r="4" cx="8" cy="8" stroke-dasharray="25.1 30.1" transform="rotate(-90,8,8)" />
+                    <polyline class="btn__icon-line" points="8 4,8 12" stroke-dasharray="8 48" stroke-dashoffset="48" />
+                </g>
+            </g>
+        </svg>
+    </button>
+    <script src="./main.js"></script>
+</body>
+</html>
